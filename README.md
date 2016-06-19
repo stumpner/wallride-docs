@@ -1,6 +1,11 @@
 WallRide Docs
 =============
 
+Setup
+-----
+
+Download and install **Pandoc** for your environment: http://pandoc.org/installing.html
+
 Generating the documentation
 ----------------------------
 
