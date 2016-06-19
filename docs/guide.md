@@ -43,11 +43,11 @@ What you need to do:
 
 2. Create wallride.home
 
-  ```bash
-  mkdir <WALLRIDE_HOME>
-  mkdir <WALLRIDE_HOME>/config
-  cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/config
-  ```
+```bash
+mkdir <WALLRIDE_HOME>
+mkdir <WALLRIDE_HOME>/config
+cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/config
+```
   
 3. Create application.properties  
 
@@ -60,16 +60,16 @@ What you need to do:
 
 4. Execute command
   
-  ```bash
-  cd wallride-bootstrap
-  mvn spring-boot:run -P jar -Drun.jvmArguments=-Dwallride.home=file:<WALLRIDE_HOME>/
-  ```
+```bash
+cd wallride-bootstrap
+mvn spring-boot:run -P jar -Drun.jvmArguments=-Dwallride.home=file:<WALLRIDE_HOME>/
+```
   
 5. Access URL below
   
-  ```
-  http://localhost:8080/_admin/setup
-  ```
+```
+http://localhost:8080/_admin/setup
+```
 
 6. See [setup](#setup)
 
@@ -82,11 +82,11 @@ What you need to do:
   
 2. Create wallride.home  
 
-  ```bash
-  mkdir <WALLRIDE_HOME>
-  mkdir <WALLRIDE_HOME>/config
-  cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/config
-  ```
+```bash
+mkdir <WALLRIDE_HOME>
+mkdir <WALLRIDE_HOME>/config
+cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/config
+```
 
 3. Create application.properties  
 
@@ -116,11 +116,11 @@ What you need to do:
  
  Create S3 bucket and in that, create a directory for wallride.home.
   
- ```bash
- mkdir <WALLRIDE_HOME>
- mkdir <WALLRIDE_HOME>/config
- cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/config
- ```
+```bash
+mkdir <WALLRIDE_HOME>
+mkdir <WALLRIDE_HOME>/config
+cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/config
+```
  
  3. Create application.properties in S3
  
@@ -145,7 +145,7 @@ What you need to do:
 3 WallRide Home Directory
 =======================
  
-```
+```text
 wallride_home
 +-- config
 |   +-- application.properties
