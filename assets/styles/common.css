@@ -275,5 +275,6 @@ th, td {
 	vertical-align: top;
 	white-space: nowrap;
 }
-
-
+img.img-responsive {
+	margin: 0 auto;
+}
