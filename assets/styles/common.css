@@ -57,8 +57,7 @@ p {
 }
 .content h1 {
 	font-weight: bold;
-	font-size: 250%;
-	/* background-color: #f9f9f9; */
+	font-size: 210%;
 	margin-left: -15px;
 	padding: 10px 15px;
 	margin-right: -15px;
@@ -159,6 +158,16 @@ img.img-responsive {
 }
 .menu-link span:after {
 	margin-top: 0.6em;
+}
+.content ol, .content ul {
+	-webkit-padding-start: 20px;
+}
+.content ol li {
+	font-weight: 600;
+	font-family: 'Ubuntu', sans-serif;
+}
+pre {
+	font-size: 1.5rem;
 }
 
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
