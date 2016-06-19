@@ -230,6 +230,45 @@ write pom.xml 2. <span class="citation">@SpringBootApplication</span>
 existing Controller 5. In case of adding Service 6. In case of adding
 Entities
 
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.wallride</groupId>
+		<artifactId>wallride-parent</artifactId>
+		<version>1.0.0.M8</version>
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>example-blog</artifactId>
+	<version>1.0.0.RELEASE</version>
+	<packaging>jar</packaging>
+
+	<properties>
+		<start-class>com.example.Application</start-class>
+	</properties>
+
+	<dependencies>
+		<!-- MySQL Driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.23</version>
+		</dependency>
+	</dependencies>
+</project>
+```
+
+```java
+@SpringBootApplication
+public class Application extends SpringBootServletInitializer  {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+}
+```
+
 Entities
 --------
 ER図
