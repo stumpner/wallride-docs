@@ -10,8 +10,9 @@ body{
 	margin-left: -15px;
 	padding: 10px 15px;
 	margin-right: -15px;
-	border-bottom: 1px solid #9e9e9e;
+	background-color: #231f1f;
 	margin-bottom: 10px;
+	color: #ffffff;
 }
 h2 {
 	font-weight: bold;

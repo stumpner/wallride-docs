@@ -199,9 +199,6 @@ wallride_home
  | URL                           |      outline                                           |  directory path        |
  |-------------------------------|--------------------------------------------------------|------------------------|
  | /                             | Index template                                         | /index.html            |
- | /{language}/yyyy/             | Article description template                           | /article/index.html    |
- | /{language}/yyyy/mm/          | Article description template                           | /article/index.html    |
- | /{language}/yyyy/mm/dd/       | Article description template                           | /article/index.html    | 
  | /{language}/yyyy/mm/dd/{code} | Article description template                           | /article/describe.html |
  | /category/{categoryCode}      | Article index template grouped by the category         | /article/category.html |
  | /author/{authorId}            | Article index template grouped by the author           | /article/author.html   |
