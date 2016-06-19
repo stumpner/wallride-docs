@@ -262,6 +262,8 @@ Entities
 --------
 ER図
 
+[![ER Diagram](../assets/images/er-diagram.png)](../assets/images/er-diagram.png)
+
 About HA
 --------
 WallRide is infinispanを使ったHA構成を実現してるよ 
