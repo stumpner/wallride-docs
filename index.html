@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://getbootstrap.com/examples/sticky-footer/ -->
+<html lang="en" th:lang="${#locale.language}">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="WallRide.CMS for developers of principles." />
+	<meta name="author" content="Tagbangers, inc." />
+	<title>WallRide</title>
+	<link rel="shortcut icon" href="resource/img/favicon.png" />
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="resources/font/font-awesome-4.3.0/css/font-awesome.min.css" />
+	<link href='//fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'/>
+	<link rel="stylesheet" href="resources/css/common.css" href="#" />
+	<link rel="stylesheet" href="resources/css/menu.css" href="#" />
+	<style>
+		body {
+			background-size:cover;
+			z-index: -2;
+			background-image: url('resources/img/19901726_72B.jpg');
+			background-repeat:no-repeat;
+			background-position: 50%;
+			background-color: #C5C5C5;
+		}
+	</style>
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script type="text/javascript" src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="container">
+			<div class="page-header">
+				<h1>WallRide</h1>
+				<h2>CMS for developers of principles</h2>
+				<a class="ribbon" href="//github.com/tagbangers/wallride" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:2500;" src="/resources/img/forkme_right_white_ffffff.png" src="forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
+			</div>
+			<div class="middle">
+				<a class="btn btn-lg btn-primary" target="_blank" href="docs.html">Let's go ride now</a>
+			</div>
+			<a href="#" class="description" style="display:none">What's WallRide</a>
+		</div>
+	</div>
+	<footer>
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<p>WallRide is a multilingual easy-to-customize open source CMS made by Java,
+							using Spring Framework, Hibernate and Thymeleaf.<br/>
+							WallRide focuses on sophisticated UI, simple and clean source code
+							and easy deploy to AWS BeansTalk(of course other servlet containers)</p>
+						<p>
+							We hope this CMS is loved by many developers of principles all over the world.
+						</p>
+					</div>
+					<div class="pull-right">
+						<p class="text-muted copyright"><a href="//www.tagbangers.co.jp" target="_blank"> <img class="tb" th:src="@{/resources/img/tb_logo_w.png}" src="tb_logo_w.png" style="width:40px;"/></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
