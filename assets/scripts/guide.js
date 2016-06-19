@@ -8,11 +8,6 @@ $(function () {
         return false;
     });
 
-    // ResponsifyJS
-    $(window).load(function() {
-        $('img').responsify();
-    });
-
     // PrismJS
     var languages = ['bash', 'java', 'javascript', 'xml', 'html', 'css', 'sql', 'text'];
     languages.forEach(function(language) {
