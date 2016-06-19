@@ -92,6 +92,9 @@ th, td {
 	vertical-align: top;
 	white-space: nowrap;
 }
+img {
+	max-width: 100%;
+}
 img.img-responsive {
 	margin: 10px auto;
 }
