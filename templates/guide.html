@@ -1,13 +1,57 @@
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
-		<link rel="stylesheet" href="../assets/styles/hoge.css"/>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website."/>
+		<title>WallRide documentation</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="../assets/styles/prism.css"/>
+		<link rel="stylesheet" href="../assets/styles/common.css"/>
 	</head>
 	<body>
-		<div>
-			$toc$
+
+		<div id="layout">
+			<!-- Menu toggle -->
+			<a href="#menu" id="menuLink" class="menu-link">
+				<!-- Hamburger icon -->
+				<span></span>
+			</a>
+
+			<div id="menu">
+				$toc$
+			</div>
+
+			<div id="main">
+				<div class="header">
+					<img src="../assets/images/logo.png" style="width: 150px"/>
+					<h1>WallRide</h1>
+					<h2>for java developers</h2>
+					<div class="tutorial-metadata">
+						<div id="tutorial-version">
+							<span class="tutorial-metadata-label">Document version:</span> $version$
+						</div>
+						<div id="project-version">
+							<span class="tutorial-metadata-label">Project version:</span> $thymeleafVersion$
+						</div>
+						<div id="project-website">
+							<span class="tutorial-metadata-label">Project web site:</span>
+							<a href="http://www.thymeleaf.org">http://wallride.org</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="content">
+					$body$
+				</div>
+			</div>
 		</div>
-		<div>
-			$body$
-		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="../assets/scripts/dumbqueryselector.js"></script>
+		<script src="../assets/scripts/prism.js"></script>
+		<script src="../assets/scripts/hoge.js"></script>
+		<script src="../assets/scripts/menu.js"></script>
 	</body>
 </html>
