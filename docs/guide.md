@@ -54,7 +54,7 @@ Configure these properties in application.properties according to your environme
 - spring.mail.port
 - spring.mail.default-encoding
 
-2.2 Run Executable jar
+2.3 Run Executable jar
 ---------------------
 What you need to do:
 
@@ -73,7 +73,7 @@ http://localhost:8080/_admin/setup
 
 4. See [setup](#setup)
 
-2.3 Run War + Tomcat
+2.4 Run War + Tomcat
 ---------------------
 What you need to do:
 
@@ -87,9 +87,13 @@ What you need to do:
   
 5. Start Tomcat
 
+```bash
+
+```
+
 6. See [setup](#setup)
 
-2.4 Run AWS Elastic Beanstalk
+2.5 Run AWS Elastic Beanstalk
 ---------------------
 1. Download the latest war file from the link below.  
 \[link\]
@@ -109,7 +113,7 @@ And set the value of jgroups
 2. Setup AWS Elastic Beanstalk  
 3. Configure AWS Elastic Beanstalk  
 4. Upload war  
-5. See setup
+5. See [setup](#setup)
  
 3 WallRide Home Directory
 =======================
@@ -159,8 +163,7 @@ wallride_home
 5.1 Customize themes
 ----------------
  
- WallRide has original themes for the guest site in it, but you can replace them by putting
- your sources in wallride.home. 
+WallRide has original themes for the guest site in it, but you can replace them by putting your sources in wallride.home. 
  
 1. HTML
  
@@ -182,7 +185,7 @@ WallRide customizable variables … choto matte kudasai.
  
 2. Resources
 
-Put resources under resources directory in wallride.home. You can refer them by html like this;
+Put resources under "resources" directory in wallride.home. You can refer them from html like this;
 
 ```html
 <link rel="stylesheet" th:href="@{/resources/css/sticky-footer-navbar.css}" href="#" />
