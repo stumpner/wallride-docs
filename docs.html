@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website."/>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<title>WallRide documentation</title>
+		<link rel="stylesheet" href="resources/css/menu.css"/>
+		<style>
+			li {
+				margin: 20px 0;
+			}
+		</style>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</head>
+	<body>
+
+		<div id="layout">
+			<!-- Menu toggle -->
+			<a href="#menu" id="menuLink" class="menu-link">
+				<!-- Hamburger icon -->
+				<span></span>
+			</a>
+
+			<div id="menu">
+				<div class="pure-menu">
+					<a class="pure-menu-heading" href="docs.html" th:href="@{/docs}">WallRide</a>
+					<ul class="pure-menu-list">
+						<li>
+							<a href="#intro" class="pure-menu-link">Intro</a>
+						</li>
+						<ul>
+							<li>
+								<a href="#what-is-wallride" class="pure-menu-link">What is WallRide?</a>
+							</li>
+							<li class="pure-menu-item menu-item-divided pure-menu-selected">
+								<a href="#what-can-wallride-do" class="pure-menu-link">What WallRide can do</a>
+							</li>
+						</ul>
+						<li>
+							<a href="#getting-started" class="pure-menu-link">Getting started</a>
+						</li>
+						<ul>
+							<li>
+								<a href="#getting-started" class="pure-menu-link">Install</a>
+							</li>
+							<ul>
+								<li>
+									<a href="#start-jar" class="pure-menu-link">Executable jar</a>
+								</li>
+								<li>
+									<a href="#start-war" class="pure-menu-link">Tomcat</a>
+								</li>
+								<li>
+									<a href="#start-beanstalk" class="pure-menu-link">AWS Elastic Beanstalk</a>
+								</li>
+							</ul>
+							<li>
+								<a href="#overall-architecture" class="pure-menu-link">WallRide Home Directory</a>
+							</li>
+						</ul>
+						<li>
+							<a href="#user-guide" class="pure-menu-link">User guide</a>
+						</li>
+						<ul>
+							<li>
+								<a href="#setup" class="pure-menu-link">Set up</a>
+							</li>
+							<li>
+								<a href="#features" class="pure-menu-link">Features</a>
+							</li>
+							<li>
+								<a href="#write-article" class="pure-menu-link">Write an article</a>
+							</li>
+						</ul>
+						<li>
+							<a href="#designer-guide" class="pure-menu-link">Designer guide</a>
+						</li>
+						<ul>
+							<li>
+								<a href="#customize-themes" class="pure-menu-link">Customize themes</a>
+							</li>
+						</ul>
+						<li>
+							<a href="#developer-guide" class="pure-menu-link">Developer guide</a>
+						</li>
+						<ul>
+							<li>
+								<a href="#overall-architecture" class="pure-menu-link">Overall architecture</a>
+							</li>
+							<li>
+								<a href="#start-customize" class="pure-menu-link">Customize</a>
+							</li>
+							<li>
+								<a href="#entities" class="pure-menu-link">Entities</a>
+							</li>
+							<li>
+								<a href="#about-ha" class="pure-menu-link">About HA</a>
+							</li>
+						</ul>
+						<!--
+												<ul>
+													<li><a href="#articles" class="pure-menu-link">Articles</a></li>
+													<li><a href="#pages" class="pure-menu-link">Pages</a></li>
+													<li><a href="#categories" class="pure-menu-link">Categories</a></li>
+													<li><a href="#tags" class="pure-menu-link">Tags</a></li>
+													<li><a href="#custom-fields" class="pure-menu-link">Custom Fields</a></li>
+													<li><a href="#comments" class="pure-menu-link">Comments</a></li>
+												</ul>
+						-->
+						<!--<li><a href="#" class="pure-menu-link">How to make plugins</a></li>-->
+						<li>
+							<a href="#contribute" class="pure-menu-link">Contribute to WallRide</a>
+						</li>
+						<li>
+							<a href="#whats-next" class="pure-menu-link">What's next</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="main">
+				<div class="header">
+					<h1>WallRide</h1>
+					<h2>for java developers</h2>
+				</div>
+
+				<div class="content">
+					<h2 id="intro">Intro</h2>
+					<h3 class="content-subhead" id="what-is-wallride">What is WallRide?</h3>
+					<p>
+						WallRide is a multilingual easy-to-customize open source CMS made by Java, using Spring Framework, Hibernate and Thymeleaf.<br/>
+						WallRide focuses on sophisticated UI, simple and clean source code and easy deploy to AWS BeansTalk(of course other servlet containers)<br/>
+						We hope this CMS is loved by many developers of principles all over the world.
+					</p>
+					<h3 class="content-subhead" id="what-can-wallride-do">What can WallRide do?</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<!--<h3 class="content-subhead" id="overall-architecture">Overall Architecture</h3>-->
+					<p></p>
+					<h2 class="content-subhead" id="getting-started">Getting started</h2>
+					<p>WallRide has 2 packaging types; jar and war.</p>
+					<h3><span id="installation-requirements" class="fragment"></span>
+						<a href="#installation-requirements"><i class="fa fa-link"></i></a>
+						Installation requirements
+					</h3>
+
+					<ul>
+						<li>Java8 or higher</li>
+						<li>Database (MySQL or PostgreSQL)</li>
+					</ul>
+
+					<h3><span id="executable-jar" class="fragment"></span>
+						<a href="#executable-jar"><i class="fa fa-link"></i></a>
+						Executable jar
+					</h3>
+
+					<p>What you need to do:</p>
+
+					<p>1.Download the latest jar files from the link below.
+						[link]
+						2. Create wallride.home<br/>
+						3. Create application.properties<br/>
+						4. Execute command<br/>
+						5. Access URL below<br/>
+						5. See setup
+					</p>
+
+					<h3>
+						<span id="war--tomcat" class="fragment"></span>
+						<a href="#war--tomcat"><i class="fa fa-link"></i></a>
+						War + Tomcat
+					</h3>
+
+					<p>What you need to do:</p>
+
+					<p>1.Download the latest war file from the link below.<br/>
+						[link]<br/>
+						2. Create wallride.home<br/>
+						3. Create application.properties<br/>
+						4. Configure context in Tomcat<br/>
+						5. Modify Tomcat's server.xml to handle internationalized characters correctly<br/>
+						6. Fix memory and mail handling settings in Tomcat<br/>
+						7. Start Tomcat<br/>
+						8. See setup
+					</p>
+
+					<h3 id="aws-elastic-beanstalk">AWS Elastic Beanstalk</h3>
+					<p>1.Download the latest war file from the link below.<br/>
+						[link]<br/>
+						2. Crerate wallride.home on S3<br/>
+						3. Crerate application.properties on S3<br/>
+						2. Setup AWS Elastic Beanstalk<br/>
+						3. Configure AWS Elastic Beanstalk<br/>
+						4. Upload war<br/>
+						5. See setup
+					</p>
+
+					<h2 id="wallride-home-directory">WallRide Home Directory</h2>
+					<p>*Directory Treeをかく</p>
+
+					<h2><span id="user-guide" class="fragment"></span>
+						<a href="#user-guide"><i class="fa fa-link"></i></a>
+						User guide
+					</h2>
+
+					<p>*きゃぷちゃとか</p>
+
+					<h2 id="designer-guide">Designer guide</h2>
+
+					<h3 id="customize-themes">Customize themes</h3>
+					<p>WallRide has original themes in it but you can replace them by putting your sources in wallride.home. 1. HTML WallRide template engine is thymeleaf.if you extend it, refer to thymeleaf docmentation. 対応するURL・outline・directory path 使える変数…choto matte kudasai 2. resources ディレクトリのここにおいてね　そうすれば　htmlファイルからこういうふうに参照できるよ like this</p>
+					<h2 id="developer-guide">Developer guide</h2>
+					<h3 id="overall-architecture">Overall architecture</h3>
+					<p>WallRide is 構成 Spring Framework&amp;Hibernate,Thymeleaf</p>
+					<h3 id="customize">Customize</h3>
+					<p>Spring bootのスターターのtechのろじをつかっててcho easy to customize 1. write pom.xml 2. <span class="citation">@SpringBootApplication</span> つけたメインクラスをつくってね 3. In case of adding URL 4. Override existing Controller 5. In case of adding Service 6. In case of adding Entities</p>
+					<h3 id="entities">Entities</h3>
+					<p>ER図</p>
+					<h3 id="about-ha">About HA</h3>
+					<p>WallRideはinfinispanを使ったHA構成を実現してるよ chotto matte kudasai</p>
+					<h3 id="whats-next">What’s next</h3>
+					<p>milestone版だけどrelease版にむけてがんばってるよ milestone版でも使えるよ</p>
+					<h3 id="contribute">Contribute</h3>
+					<p>WallRideのgithubリポジトリはここだよ PRがんがんおくってね わからなかったらissueにぽすとしてね</p>
+
+
+					<h3 class="content-subhead" id="start-jar">Executable jar</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<h3 class="content-subhead" id="start-war">War + Servlet container</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<h3 class="content-subhead" id="start-customize">Customize</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<h3 class="content-subhead" id="start-wallride">WallRide</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+		</div>
+		<script src="resources/js/menu.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script>
+			$(function () {
+				// #で始まるアンカーをクリックした場合に処理
+				$("a[href^='#']").click(function () {
+					// スクロールの速度
+					var speed = 400; // ミリ秒
+					// アンカーの値取得
+					var href = $(this).attr("href");
+					// 移動先を取得
+					var target = $(href == "#" || href == "" ? 'html' : href);
+					// 移動先を数値で取得
+					var position = target.offset().top;
+					// スムーススクロール
+					$('body,html').animate({scrollTop: position}, speed, 'swing');
+					return false;
+				});
+			});
+		</script>
+	</body>
+</html>
