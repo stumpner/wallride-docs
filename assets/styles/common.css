@@ -1,7 +1,59 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic);
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic';
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:400,700';
 body{
-	font-family:"PT Sans", "DejaVu Sans", Arial, sans, Avenir, "Open Sans";
+	font-family: "DejaVu Sans", Arial, sans, Avenir, "Open Sans";
 	color: #545454;
+	font-size: 1.6rem;
+	-webkit-font-smoothing: antialiased;
+}
+#layout,
+#menu,
+.menu-link {
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+#layout {
+	position: relative;
+	padding-left: 0;
+}
+#layout.active #menu {
+	left: 300px;
+	width: 300px;
+}
+#layout.active .menu-link {
+	left: 300px;
+}
+.content {
+	margin: 0 auto;
+	padding: 0 2em;
+	margin-bottom: 50px;
+	line-height: 1.6em;
+}
+.header {
+	margin: 0 0 20px;
+	color: #333;
+	text-align: center;
+	padding: 2em;
+	border-bottom: 1px solid #eee;
+}
+.header h1 {
+	margin: 0.2em 0 0;
+	font-size: 3em;
+	font-weight: bold;
+	background-color: transparent;
+}
+.header h2 {
+	font-weight: bold;
+	color: #a3a3a3;
+	padding: 0;
+	margin: 0 0 20px;
+}
+p {
+	margin: 0 0 1rem;
+	line-height: 1.6em;
 }
 .content h1 {
 	font-weight: bold;
@@ -14,93 +66,36 @@ body{
 	margin-bottom: 10px;
 	color: #ffffff;
 }
-h2 {
+.content h2 {
 	font-weight: bold;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 150%;
 }
-p {
-	margin: 0 0 1rem;
-	font-size: 1.7rem;
-	line-height: 1.6em;
-}
-
-.pure-img-responsive {
-	max-width: 100%;
-	height: auto;
-}
-
-/*
-Add transition to containers so they can push in and out.
-*/
-#layout,
-#menu,
-.menu-link {
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-ms-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-}
-
-/*
-This is the parent `<div>` that contains the menu and the content area.
-*/
-#layout {
-	position: relative;
-	padding-left: 0;
-}
-#layout.active #menu {
-	left: 300px;
-	width: 300px;
-}
-
-#layout.active .menu-link {
-	left: 300px;
-}
-/*
-The content `<div>` is where all your content goes.
-*/
-.content {
-	margin: 0 auto;
-	padding: 0 2em;
-	margin-bottom: 50px;
-	line-height: 1.6em;
-}
-
-.header {
-	margin: 0 0 20px;
-	color: #333;
-	text-align: center;
-	padding: 2.5em 2em 2em;
-	border-bottom: 1px solid #eee;
-}
-.header h1 {
-	margin: 0.2em 0;
-	font-size: 3em;
-	font-weight: bold;
-	background-color: transparent;
-	font-family: inherit;
-}
-.header h2 {
-	font-weight: bold;
-	color: #a3a3a3;
-	padding: 0;
-	margin-top: 0;
-}
-
 .content-subhead {
 	margin: 50px 0 20px 0;
 	font-weight: 300;
 	color: #888;
 }
+table {
+	width: 100%;
+	max-width: 100%;
+	border-collapse: collapse;
+}
+thead {
+	border-bottom: 1px dotted black;
+}
+th {
+	text-align: left;
+}
 
-
-
-/*
-The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
-appears on the left side of the page.
-*/
-
+th, td {
+	padding: 0.25em;
+	vertical-align: top;
+	white-space: nowrap;
+}
+img.img-responsive {
+	margin: 10px auto;
+}
 #menu {
 	margin-left: -300px; /* "#menu" width */
 	width: 300px;
@@ -113,18 +108,11 @@ appears on the left side of the page.
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
-/*
-All anchors inside the menu should be styled like this.
-*/
 #menu a {
 	color: #505050;
 	border: none;
 	padding: 0.6em 0 0.6em 0.6em;
 }
-
-/*
-Remove all background/borders, since we are applying them to #menu.
-*/
 #menu ul {
 	border: none;
 	background: transparent;
@@ -133,42 +121,8 @@ Remove all background/borders, since we are applying them to #menu.
 #menu li {
 	list-style: none;
 	margin: 15px 10px;
+	font-family: 'Ubuntu', sans-serif;
 }
-
-/*
-This styles the selected menu item `<li>`.
-*/
-#menu .pure-menu-selected,
-#menu .pure-menu-heading {
-	background: #1f8dd6;
-}
-/*
-This styles a link within a selected menu item `<li>`.
-*/
-#menu .pure-menu-selected a {
-	color: #fff;
-}
-
-/*
-This styles the menu heading.
-*/
-#menu .pure-menu-heading {
-	font-size: 110%;
-	color: #fff;
-	margin: 0;
-}
-
-/* -- Dynamic Button For Responsive Menu -------------------------------------*/
-
-/*
-The button to open/close the Menu is custom-made and not part of Pure. Here's
-how it works:
-*/
-
-/*
-`.menu-link` represents the responsive menu toggle that shows/hides on
-small screens.
-*/
 .menu-link {
 	position: fixed;
 	display: block; /* show this only on small screens */
@@ -182,17 +136,14 @@ small screens.
 	height: auto;
 	padding: 2.1em 1.6em;
 }
-
 .menu-link:hover,
 .menu-link:focus {
 	background: #000;
 }
-
 .menu-link span {
 	position: relative;
 	display: block;
 }
-
 .menu-link span,
 .menu-link span:before,
 .menu-link span:after {
@@ -200,24 +151,18 @@ small screens.
 	width: 100%;
 	height: 0.2em;
 }
-
 .menu-link span:before,
 .menu-link span:after {
 	position: absolute;
 	margin-top: -0.6em;
 	content: " ";
 }
-
 .menu-link span:after {
 	margin-top: 0.6em;
 }
 
-
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
-/*
-Hides the menu at `48em`, but modify this based on your app's needs.
-*/
 @media (min-width: 48em) {
 
 	.header,
@@ -256,25 +201,4 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 		position: relative;
 		left: 300px;
 	}
-}
-table {
-	width: 100%;
-	max-width: 100%;
-	border-collapse: collapse;
-}
-thead {
-	border-bottom: 1px dotted black;
-}
-
-th {
-	text-align: left;
-}
-
-th, td {
-	padding: 0.25em;
-	vertical-align: top;
-	white-space: nowrap;
-}
-img.img-responsive {
-	margin: 0 auto;
 }

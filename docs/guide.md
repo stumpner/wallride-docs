@@ -12,18 +12,7 @@ WallRide is a multilingual easy-to-customize open source CMS made by
 Java, using Spring Framework, Hibernate and Thymeleaf.  
 WallRide focuses on sophisticated UI, simple and clean source code and
 easy deploy to AWS BeansTalk(of course other servlet containers)  
-We hope this CMS is loved by many developers of principles all over the
-world.
-
-1.2 What can WallRide do?
----------------------
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.
+We hope this CMS is loved by many developers of principles all over the world.
 
 2 Getting started
 ===============
@@ -182,7 +171,7 @@ wallride_home
 <a name="setup">Setup</a>
 -----------
  
- \*きゃぷちゃとか
+
  
 5 Designer guide
 ==============
