@@ -16,13 +16,15 @@ We hope this CMS is loved by many developers of principles all over the world.
 
 1.2 What is the strong point?
 ---------------------
-1. Multilingual CMS.
+**1. Multilingual CMS.**
+
 You can manage 
  
-2. Full-text search.
+**2. Full-text search.**
+
 WallRide 
 
-3. Affinity for AWS.
+**3. Affinity for AWS.**
 
 
 2 Getting started
@@ -172,6 +174,8 @@ WallRide has original themes for the guest site in it, but you can replace them 
  
 WallRide's template engine is thymeleaf. If you extend it, please refer to [Thymeleaf documentation](http://www.thymeleaf.org/documentation.html) as well.
 
+Template for guest site
+
 | URL                           |      outline                                           |  directory path        |
 |-------------------------------|--------------------------------------------------------|------------------------|
 | /                             | Index template                                         | /index.html            |
@@ -205,7 +209,7 @@ WallRide uses Spring Framework, Hibernate, and Thymeleaf.
 
 6.2 Customize
 ---------
-Thanks to [Spring Boot starters](http://projects.spring.io/spring-boot/) which WallRide uses and customizes, it is very easy to customize it.
+Thanks to [Spring Boot starters](http://projects.spring.io/spring-boot/) which WallRide uses and customizes, it is very easy to customize it with 3 steps.
 
 1. Write pom.xml
 
@@ -250,22 +254,50 @@ public class Application extends SpringBootServletInitializer  {
 }
 ```
 
-That's it! Preparation is done, now you can start customize. 
+That's it! Now you can start customize. 
 
 3. In case of adding URL
+
 ```java
 @SpringBootApplication
+@WebGuestComponentScan(basePackageClasses = TestController.class)
+@WebAdminComponentScan(basePackageClasses = DummyController.class)
 public class Application extends SpringBootServletInitializer  {
-
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+	//run main class
 }
 ```
 
-4. Override existing Controller 
+4. In case of overriding existing Controller
+
 5. In case of adding Service
-6. In case of adding Entities
+
+```java
+@SpringBootApplication
+@ComponentScan(basePackageClasses = DummyService.class)
+public class Application extends SpringBootServletInitializer  {
+	//run main class
+}
+```
+
+6. In case of adding Repository
+
+```java
+@SpringBootApplication
+@EnableJpaRepositories(basePackageClasses = DummyRepository.class)
+public class Application extends SpringBootServletInitializer  {
+	//run main class
+}
+```
+
+7. In case of adding Entity
+
+```java
+@SpringBootApplication
+@EntityScan(basePackageClasses = Dummy.class)
+public class Application extends SpringBootServletInitializer  {
+	//run main class
+}
+```
 
 Entities
 --------
@@ -275,17 +307,18 @@ ER diagram
 
 About HA
 --------
-WallRide is infinispanを使ったHA構成を実現してるよ 
+WallRide enables HA architecture by using infinispan. 
+
 For more Details: chotto matte kudasai
 
 7 What’s next
 =============
-WallRide is still milestone but working hard for Release version!
-Of course you can use WallRide milestone version, try it out and give us more feedback!
+WallRide is still milestone version but we are working hard for Release version.
+Of course you can use WallRide with milestone one, try it out and give us more feedback!
 
 8 Contribute
 =============
-WallRide github repository is [here]()
+WallRide github repository is [here](https://github.com/tagbangers/wallride).
 PRがんがんおくってね
 If you have any questions, create an issue on github.
 
