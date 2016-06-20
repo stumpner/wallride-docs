@@ -14,13 +14,16 @@ WallRide focuses on sophisticated UI, simple and clean source code and
 easy deploy to AWS BeansTalk(of course other servlet containers)  
 We hope this CMS is loved by many developers of principles all over the world.
 
-1.2 What is WallRide?
+1.2 What is the strong point?
 ---------------------
-WallRide is a multilingual easy-to-customize open source CMS made by
-Java, using Spring Framework, Hibernate and Thymeleaf.  
-WallRide focuses on sophisticated UI, simple and clean source code and
-easy deploy to AWS BeansTalk(of course other servlet containers)  
-We hope this CMS is loved by many developers of principles all over the world.
+1. Multilingual CMS.
+You can manage 
+ 
+2. Full-text search.
+WallRide 
+
+3. Affinity for AWS.
+
 
 2 Getting started
 ===============
@@ -32,7 +35,7 @@ WallRide has 2 packaging types; jar and war.
 - Java8 or higher
 - Database (MySQL or PostgreSQL)
 
-2.2 Preparation
+<a name="preparation">2.2 Preparation</a>
 ---------------
 1. Create database for WallRide
 
@@ -71,7 +74,7 @@ mvn spring-boot:run -P jar -Drun.jvmArguments=-Dwallride.home=file:<WALLRIDE_HOM
   
 http://localhost:8080/_admin/setup
 
-4. See [setup](#setup)
+4. See [4.1 Setup](#setup)
 
 2.4 Run War + Tomcat
 ---------------------
@@ -91,7 +94,7 @@ What you need to do:
 
 ```
 
-6. See [setup](#setup)
+6. See [4.1 setup](#setup)
 
 2.5 Run AWS Elastic Beanstalk
 ---------------------
@@ -100,20 +103,20 @@ What you need to do:
 
 2. Create wallride.home in S3  
  
-Create S3 bucket and create a directory for wallride.home in it.
+Create S3 bucket and create a directory for wallride.home in it. (See [2.2 Preparation](#preparation))
 
 3. Create application.properties in S3
  
 Configure items below in application.properties 
 And set the value of jgroups 
 
- - jgroups.configurationFile=jgroups-ec2.xml
- - jgroups.s3.bucket={your-s3-bucket-name}
+- jgroups.configurationFile=jgroups-ec2.xml
+- jgroups.s3.bucket={your-s3-bucket-name}
    
-2. Setup AWS Elastic Beanstalk  
-3. Configure AWS Elastic Beanstalk  
-4. Upload war  
-5. See [setup](#setup)
+4. Setup AWS Elastic Beanstalk  
+5. Configure AWS Elastic Beanstalk  
+6. Upload war  
+7. See [4.1 Setup](#setup)
  
 3 WallRide Home Directory
 =======================
@@ -152,7 +155,7 @@ wallride_home
  
 4 User guide
 ===============
-<a name="setup">Setup</a>
+<a name="setup">4.1 Setup</a>
 -----------
 
 
@@ -167,7 +170,7 @@ WallRide has original themes for the guest site in it, but you can replace them 
  
 1. HTML
  
-WallRide template engine is thymeleaf. If you extend it, please refer to [Thymeleaf documentation](http://www.thymeleaf.org/documentation.html) as well.
+WallRide's template engine is thymeleaf. If you extend it, please refer to [Thymeleaf documentation](http://www.thymeleaf.org/documentation.html) as well.
 
 | URL                           |      outline                                           |  directory path        |
 |-------------------------------|--------------------------------------------------------|------------------------|
@@ -185,7 +188,7 @@ WallRide customizable variables … choto matte kudasai.
  
 2. Resources
 
-Put resources under "resources" directory in wallride.home. You can refer them from html like this;
+Place resource files under "resources" directory in wallride.home. You can refer them from html like this;
 
 ```html
 <link rel="stylesheet" th:href="@{/resources/css/sticky-footer-navbar.css}" href="#" />
@@ -198,13 +201,13 @@ Put resources under "resources" directory in wallride.home. You can refer them f
  
 6.1 Overall architecture
 --------------------
-WallRide is 構成 Spring Framework&Hibernate,Thymeleaf
+WallRide uses Spring Framework, Hibernate, and Thymeleaf.
 
 6.2 Customize
 ---------
-WallRide uses Spring boot starter, so it is easy to customize it.
+Thanks to [Spring Boot starters](http://projects.spring.io/spring-boot/) which WallRide uses and customizes, it is very easy to customize it.
 
-1. write pom.xml
+1. Write pom.xml
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -235,7 +238,6 @@ WallRide uses Spring boot starter, so it is easy to customize it.
 </project>
 ```
 
-
 2. Create main class with @SpringBootApplication 
 
 ```java
@@ -248,17 +250,26 @@ public class Application extends SpringBootServletInitializer  {
 }
 ```
 
-3. In case of adding URL 
+That's it! Preparation is done, now you can start customize. 
+
+3. In case of adding URL
+```java
+@SpringBootApplication
+public class Application extends SpringBootServletInitializer  {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+}
+```
+
 4. Override existing Controller 
 5. In case of adding Service
 6. In case of adding Entities
 
-
-
-
 Entities
 --------
-ER図
+ER diagram
 
 [![ER Diagram](../assets/images/er-diagram.png)](../assets/images/er-diagram.png)
 
@@ -267,13 +278,13 @@ About HA
 WallRide is infinispanを使ったHA構成を実現してるよ 
 For more Details: chotto matte kudasai
 
-What’s next
------------
+7 What’s next
+=============
 WallRide is still milestone but working hard for Release version!
 Of course you can use WallRide milestone version, try it out and give us more feedback!
 
-Contribute
-----------
+8 Contribute
+=============
 WallRide github repository is [here]()
 PRがんがんおくってね
 If you have any questions, create an issue on github.

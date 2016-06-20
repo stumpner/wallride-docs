@@ -8,6 +8,8 @@ $(function () {
         return false;
     });
 
+    $('table').wrap($('<div class="table-responsive"></div>'));
+
     // PrismJS
     var languages = ['bash', 'java', 'javascript', 'xml', 'html', 'css', 'sql', 'text'];
     languages.forEach(function(language) {
