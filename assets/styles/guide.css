@@ -83,9 +83,6 @@ p {
 .content li a, .content p a {
 	text-decoration: underline;
 }
-.content li a:hover, .content p a:hover {
-	opacity: 0.7;
-}
 .table-responsive {
 	min-height: .01%;
 	overflow-x: auto;

@@ -16,13 +16,9 @@ We hope this CMS is loved by many developers of principles all over the world.
 
 1.2 What is the strong point?
 ---------------------
-**1. Multilingual CMS.**
-
-You can manage 
+**1. Multilingual CMS.** 
  
 **2. Full-text search.**
-
-WallRide 
 
 **3. Affinity for AWS.**
 
@@ -68,8 +64,6 @@ What you need to do:
 2. Execute command
   
 ```bash
-cd wallride-bootstrap
-mvn spring-boot:run -P jar -Drun.jvmArguments=-Dwallride.home=file:<WALLRIDE_HOME>/
 ```
   
 3. Access URL below
@@ -159,9 +153,16 @@ wallride_home
 ===============
 <a name="setup">4.1 Setup</a>
 -----------
+Chotto Matte kudasai we'll provide some screenshots here to explain how to start setup
+
+WallRide is inspired by Wordpress, so if you are familiar with Wordpress you can start WallRide quickly relatively without difficulty.
+"Article" in WallRide nearly equals to "Post" in Wordpress. (Post whose URL has datetime.)
+The big difference between them, for User, is that WallRide has "Categories" and "Tags" for "Page" as well. 
+It's because we have faced with some situation that we want to group "Articles" and "Pages" by common category or tag.   
+For example, suppose that you want to make an event introduction page. Usually you start creating explanation of an event with "Page".
+But sometimes we want to relate latest articles related with the event to it. 
 
 
- 
 5 Designer guide
 ==============
  
@@ -189,6 +190,12 @@ Template for guest site
  
 
 WallRide customizable variables … choto matte kudasai.
+
+**\#articles**
+
+**\#posts**
+ 
+**\#pages**
  
 2. Resources
 
@@ -299,13 +306,13 @@ public class Application extends SpringBootServletInitializer  {
 }
 ```
 
-Entities
+6.3 Entities
 --------
 ER diagram
 
 [![ER Diagram](../assets/images/er-diagram.png)](../assets/images/er-diagram.png)
 
-About HA
+6.4 About HA
 --------
 WallRide enables HA architecture by using infinispan. 
 
