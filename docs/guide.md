@@ -33,7 +33,7 @@ WallRide has 2 packaging types; jar and war.
 - Java8 or higher
 - Database (MySQL or PostgreSQL)
 
-<a name="preparation">2.2 Preparation</a>
+2.2 Preparation
 ---------------
 1. Create database for WallRide
 
@@ -151,7 +151,7 @@ wallride_home
  
 4 User guide
 ===============
-<a name="setup">4.1 Setup</a>
+4.1 Setup
 -----------
 Chotto Matte kudasai we'll provide some screenshots here to explain how to start setup
 
@@ -326,8 +326,23 @@ Of course you can use WallRide with milestone one, try it out and give us more f
 8 Contribute
 =============
 WallRide github repository is [here](https://github.com/tagbangers/wallride).
-PRがんがんおくってね
-If you have any questions, create an issue on github.
+If you want to contribute to a project and make it better, your help is very welcome.
+PR is always welcome! Please note that to maintain the WallRide code simple and clean,
+follow the instruction below.   
+
+1. Fork the project into your personal space on WallRide.
+2. Create a feature branch, branch away from master. Usually from develop branch. 
+3. Write code (if possible, write test code as well)
+4. Add your changes to the CHANGELOG if possible
+5. If you have multiple commits please combine them into one commit by squashing them if possible
+7. Push the commit(s) to your fork
+8. Submit a pull request (PR) to the develop branch
+9. The PR title describe the change you want to make
+10. When writing commit messages please write like the current commit we make if possible.
+
+If you have any questions, create an issue on github. In the future we might switch to use other issue management services like JIRA, or chat with gitter,
+but as for now, let's start from simple github issues.
+
 
   
   
