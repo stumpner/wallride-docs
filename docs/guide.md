@@ -153,15 +153,19 @@ wallride_home
 ===============
 4.1 Setup
 -----------
-Chotto Matte kudasai we'll provide some screenshots here to explain how to start setup
+
+After you launch the app, you will see this screen. 
+
+[![Set up](../assets/images/setup.jpg)](../assets/images/setup.jpg)
+
+This is the basic setting of the new website. You input title, default language, other languages to switch, and first user info.
 
 WallRide is inspired by Wordpress, so if you are familiar with Wordpress you can start WallRide quickly relatively without difficulty.
 "Article" in WallRide nearly equals to "Post" in Wordpress. (Post whose URL has datetime.)
-The big difference between them, for User, is that WallRide has "Categories" and "Tags" for "Page" as well. 
+The big difference between WallRide and WordPress is that WallRide has "Categories" and "Tags" for "Page" as well. 
 It's because we have faced with some situation that we want to group "Articles" and "Pages" by common category or tag.   
 For example, suppose that you want to make an event introduction page. Usually you start creating explanation of an event with "Page".
-But sometimes we want to relate latest articles related with the event to it. 
-
+But sometimes we want to link latest articles related with the event to it.    
 
 5 Designer guide
 ==============
