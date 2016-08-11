@@ -3,12 +3,19 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website."/>
+		<meta name="description" content="WallRide documentations. CMS for Java developers"/>
+		<meta property="og:url"           content="http://wallride.org/" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="WallRide documentation" />
+		<meta property="og:description"   content="WallRide documentations. CMS for Java developers" />
+		<meta property="og:image"         content="http://wallride.org/assets/images/board.jpg" />
+
 		<title>WallRide documentation</title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css">
 		<link rel="stylesheet" href="../assets/styles/guide.css"/>
+		<link rel="icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico" />
 	</head>
 	<body>
 		<div id="layout">
@@ -40,6 +47,11 @@
 							<span class="tutorial-metadata-label">Github:</span>
 							<a href="https://github.com/tagbangers/wallride" target="_blank">https://github.com/tagbangers/wallride</a>
 						</div>
+						<div id="sns">
+							<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fwallride.org%2F&width=82&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId=594512680722161" width="82" height="28" style="border:none;overflow:hidden;vertical-align:sub" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+							<!-- Place this tag where you want the button to render. -->
+							<a class="github-button" href="https://github.com/tagbangers/wallride" data-icon="octicon-star" data-style="mega" data-count-href="/tagbangers/wallride/stargazers" data-count-api="/repos/tagbangers/wallride#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star tagbangers/wallride on GitHub">Star</a>
+						</div>
 					</div>
 					<img class="img-responsive" src="../assets/images/board.jpg"/>
 				</div>
@@ -60,5 +72,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-sql.min.js"></script>
 		<script src="../assets/scripts/guide.js"></script>
 		<script src="../assets/scripts/menu.js"></script>
+		<!-- Place this tag in your head or just before your close body tag. -->
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
 	</body>
 </html>

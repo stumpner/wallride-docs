@@ -186,7 +186,9 @@ img.img-responsive {
 pre {
 	font-size: 1.5rem;
 }
-
+#sns {
+	margin-top: 10px;
+}
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 @media screen and (max-width: 767px) {
 	.table-responsive {
