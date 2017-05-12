@@ -46,14 +46,20 @@ cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/confi
 ```
 3. Set application.properties
 
-Configure these properties in application.properties according to your environment. 
+Configure these properties in application.properties according to your environment.
 
-- spring.datasource.url
-- spring.datasource.username
-- spring.datasource.password
-- spring.mail.host
-- spring.mail.port
-- spring.mail.default-encoding
+Edit \<WALLRIDE_HOME\>/config/application.properties. 
+
+Required properties are:
+
+```properties
+spring.datasource.url
+spring.datasource.username
+spring.datasource.password
+spring.mail.host
+spring.mail.port
+spring.mail.default-encoding
+```
 
 2.3 Run Executable jar
 ---------------------
