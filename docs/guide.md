@@ -147,7 +147,7 @@ Tier: Web Server
 Platform: Tomcat
 ```
 
-5. Configure AWS Elastic Beanstalk  
+5. Configure Environment properties  
 
 ```properties
 Name: wallride.home
