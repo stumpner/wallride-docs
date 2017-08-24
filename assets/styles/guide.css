@@ -68,6 +68,7 @@ p {
 	font-weight: bold;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 150%;
+	margin-top: 30px;
 }
 .content h2 a:hover {
 	text-decoration: none;

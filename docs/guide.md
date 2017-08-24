@@ -61,15 +61,44 @@ spring.mail.port
 spring.mail.default-encoding
 ```
 
-2.3 Run Executable jar
----------------------
-What you need to do:
+Now, let's run the application. You can choose the way to run from the following;
 
-1. Download the latest jar files from the link below. \[link\]
+
+2.3.1 Run from Maven Command Line
+-------------------------
+1. Check out sources
+
+```bash
+$ git clone git@github.com:tagbangers/wallride.git
+```
+
+2. Execute Command
+
+```bash
+$ cd wallride/
+$ ./mvnw install -P jar && ./mvnw spring-boot:run -Pjar -Drun.jvmArguments="-Dwallride.home=file:<WALLRIDE_HOME>" -pl wallride-bootstrap
+```
+
+3. Access URL below
+  
+http://localhost:8080/_admin/setup
+
+4. See [4.1 Setup](#setup)
+
+2.3.2 Run Executable jar
+---------------------
+
+1. Check out sources
+
+```bash
+$ git clone git@github.com:tagbangers/wallride.git
+```
   
 2. Execute command
   
 ```bash
+$ cd wallride/
+$ ./mvnw package -P jar && JAVA_OPTS="-Dwallride.home=file:<WALLRIDE_HOME>" ./wallride-bootstrap/target/wallride-bootstrap-X.X.X.jar
 ```
   
 3. Access URL below
@@ -78,47 +107,59 @@ http://localhost:8080/_admin/setup
 
 4. See [4.1 Setup](#setup)
 
-2.4 Run War + Tomcat
+
+2.3.3 Run from AWS Elastic Beanstalk
 ---------------------
-What you need to do:
-
-1. Download the latest war file from the link below.  \[link\]
-  
-2. Configure context in Tomcat
-  
-3. Modify Tomcat’s server.xml to handle internationalized characters correctly
-
-4. Fix memory and mail handling settings in Tomcat
-  
-5. Start Tomcat
+1. Check out sources
 
 ```bash
-
+$ git clone git@github.com:tagbangers/wallride.git
 ```
 
-6. See [4.1 setup](#setup)
+2. Build Project
 
-2.5 Run AWS Elastic Beanstalk
----------------------
-1. Download the latest war file from the link below.  
-\[link\]
+```bash
+$ cd wallride/
+$ ./mvnw package -P war
+```
 
-2. Create wallride.home in S3  
+the war file will be created in the directory below
+
+```properties
+./wallride-bootstrap/target/wallride-bootstrap-X.X.X.war
+```
  
-Create S3 bucket and create a directory for wallride.home in it. (See [2.2 Preparation](#preparation))
-
 3. Create application.properties in S3
  
 Configure items below in application.properties 
 And set the value of jgroups 
 
-- jgroups.configurationFile=jgroups-ec2.xml
-- jgroups.s3.bucket={your-s3-bucket-name}
+```properties
+jgroups.configurationFile=jgroups-ec2.xml
+jgroups.s3.bucket={your-s3-bucket-name}
+
+```
    
 4. Setup AWS Elastic Beanstalk  
+
+```properties
+Tier: Web Server
+Platform: Tomcat
+```
+
 5. Configure AWS Elastic Beanstalk  
-6. Upload war  
-7. See [4.1 Setup](#setup)
+
+```properties
+Name: wallride.home
+Value: s3://<WALLRIDE_HOME>
+```
+
+6. Upload war
+
+7. Access URL below  
+http://xxx.elasticbeanstalk.com/_admin/setup
+
+8. See [4.1 Setup](#setup)
  
 3 WallRide Home Directory
 =======================
@@ -237,7 +278,7 @@ Thanks to [Spring Boot starters](http://projects.spring.io/spring-boot/) which W
 	<parent>
 		<groupId>org.wallride</groupId>
 		<artifactId>wallride-parent</artifactId>
-		<version>1.0.0.M8</version>
+		<version>1.0.0.M16</version>
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>example-blog</artifactId>
