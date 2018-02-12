@@ -41,14 +41,15 @@ WallRide has 2 packaging types; jar and war.
 
 ```bash
 $ git clone git@github.com:tagbangers/wallride.git
+$ cd wallride/
 ```
 
 3. Create wallride.home
 
 ```bash
-mkdir <WALLRIDE_HOME>
-mkdir <WALLRIDE_HOME>/config
-cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/config
+$ mkdir <WALLRIDE_HOME>
+$ mkdir <WALLRIDE_HOME>/config
+$ cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/config
 ```
 4. Set application.properties
 
