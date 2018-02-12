@@ -37,14 +37,20 @@ WallRide has 2 packaging types; jar and war.
 ---------------
 1. Create database for WallRide
 
-2. Create wallride.home
+2. Check out sources
+
+```bash
+$ git clone git@github.com:tagbangers/wallride.git
+```
+
+3. Create wallride.home
 
 ```bash
 mkdir <WALLRIDE_HOME>
 mkdir <WALLRIDE_HOME>/config
 cp wallride-core/src/main/resources/application.properties <WALLRIDE_HOME>/config
 ```
-3. Set application.properties
+4. Set application.properties
 
 Configure these properties in application.properties according to your environment.
 
@@ -66,60 +72,41 @@ Now, let's run the application. You can choose the way to run from the following
 
 2.3.1 Run from Maven Command Line
 -------------------------
-1. Check out sources
+
+1. Execute Command
 
 ```bash
-$ git clone git@github.com:tagbangers/wallride.git
-```
-
-2. Execute Command
-
-```bash
-$ cd wallride/
 $ ./mvnw spring-boot:run -Pjar -Drun.jvmArguments="-Dwallride.home=file:<WALLRIDE_HOME>" 
 ```
 
-3. Access URL below
+2. Access URL below
   
 http://localhost:8080/_admin/setup
 
-4. See [4.1 Setup](#setup)
+3. See [4.1 Setup](#setup)
 
 2.3.2 Run Executable jar
 ---------------------
-
-1. Check out sources
-
-```bash
-$ git clone git@github.com:tagbangers/wallride.git
-```
   
-2. Execute command
+1. Execute command
   
 ```bash
-$ cd wallride/
 $ ./mvnw package -P jar && JAVA_OPTS="-Dwallride.home=file:<WALLRIDE_HOME>" ./wallride-bootstrap/target/wallride-bootstrap-X.X.X.jar
 ```
   
-3. Access URL below
+2. Access URL below
   
 http://localhost:8080/_admin/setup
 
-4. See [4.1 Setup](#setup)
+3. See [4.1 Setup](#setup)
 
 
 2.3.3 Run from AWS Elastic Beanstalk
 ---------------------
-1. Check out sources
+
+1. Build Project
 
 ```bash
-$ git clone git@github.com:tagbangers/wallride.git
-```
-
-2. Build Project
-
-```bash
-$ cd wallride/
 $ ./mvnw package -P war
 ```
 
@@ -129,7 +116,7 @@ the war file will be created in the directory below
 ./wallride-bootstrap/target/wallride-bootstrap-X.X.X.war
 ```
  
-3. Create application.properties in S3
+2. Create application.properties in S3
  
 Configure items below in application.properties 
 And set the value of jgroups 
@@ -140,26 +127,26 @@ jgroups.s3.bucket={your-s3-bucket-name}
 
 ```
    
-4. Setup AWS Elastic Beanstalk  
+3. Setup AWS Elastic Beanstalk  
 
 ```properties
 Tier: Web Server
 Platform: Tomcat
 ```
 
-5. Configure Environment properties  
+4. Configure Environment properties  
 
 ```properties
 Name: wallride.home
 Value: s3://<WALLRIDE_HOME>
 ```
 
-6. Upload war
+5. Upload war
 
-7. Access URL below  
+6. Access URL below  
 http://xxx.elasticbeanstalk.com/_admin/setup
 
-8. See [4.1 Setup](#setup)
+7. See [4.1 Setup](#setup)
  
 3 WallRide Home Directory
 =======================
@@ -278,7 +265,7 @@ Thanks to [Spring Boot starters](http://projects.spring.io/spring-boot/) which W
 	<parent>
 		<groupId>org.wallride</groupId>
 		<artifactId>wallride-parent</artifactId>
-		<version>1.0.0.M16</version>
+		<version>1.0.0.M18</version>
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>example-blog</artifactId>
