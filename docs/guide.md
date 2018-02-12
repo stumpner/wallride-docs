@@ -76,7 +76,7 @@ $ git clone git@github.com:tagbangers/wallride.git
 
 ```bash
 $ cd wallride/
-$ ./mvnw install -P jar && ./mvnw spring-boot:run -Pjar -Drun.jvmArguments="-Dwallride.home=file:<WALLRIDE_HOME>" -pl wallride-bootstrap
+$ ./mvnw spring-boot:run -Pjar -Drun.jvmArguments="-Dwallride.home=file:<WALLRIDE_HOME>" 
 ```
 
 3. Access URL below
