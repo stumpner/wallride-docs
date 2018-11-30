@@ -148,6 +148,43 @@ Value: s3://<WALLRIDE_HOME>
 http://xxx.elasticbeanstalk.com/_admin/setup
 
 7. See [4.1 Setup](#setup)
+
+2.3.4 Run multiple Wallride instances in one serlvet engine
+---------------------
+
+To enable the operation of several wallride instances in one servlet engine (tomcat), there is the possibility to configure the wallride.home parameter via a config file placed under the webroot directory.
+
+**Instance Configuration File**
+
+If you deploy wallride as war-file to a tomcat to /srv/myblog.war you can place a config file to /srv/myblog.conf or /srv/wallride.conf with content:
+
+    wallride.home=file:/srv/wallride-home/
+
+There is no need to config JAVA_OPTS for tomcat or other serlvet engines.
+
+**Multiple Instances Example:**
+
+Instance | Location of war-file | conf-File
+------------ | ------------- | -----------------
+Instance 1 | /srv/webapps/**myblog.war** | /srv/webapps/**myblog.conf**
+Instance 2 | /srv/webapps/**yourblog.war** | /srv/webapps/**yourblog.conf**
+
+* For Instance 1 war-file may be placed to /srv/webapps/**myblog.war**
+Place config file to /srv/webapps/**myblog.conf**
+
+* For Instance 2 war-file my be placed to /srv/webapps/**yourblog.war**
+Place config file to /srv/webapps/**yourblog.conf**
+
+**Attention on JMX**
+ 
+If the second wallride instance is raised then you may get an exception `Unable to register MBean [HikariDataSource (HikariPool-2)] with key 'dataSource'; nested exception is javax.management.InstanceAlreadyExistsException: com.zaxxer.hikari: name = dataSource, type = HikariDataSource.`
+
+The cause is due to JMX because Hikari wants to register under the same name.
+To solve this, add the following line to the application.properties file under wallride.home 
+
+    spring.jmx.default-domain = domain1
+
+The domain1 name can be chosen freely, so it has nothing to do with the Internet domain name. It only has to be different from the other instances.
  
 3 WallRide Home Directory
 =======================
